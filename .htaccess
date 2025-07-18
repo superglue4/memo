@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# 실제 파일이나 디렉터리가 있으면 그대로 요청
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 나머지는 index.php로 전달
+RewriteRule ^ index.php [L]
